@@ -1,11 +1,13 @@
 import {BrowserRouter as Router} from 'react-router-dom'
-import Navigation from './components/Navbar/navigation';
+import { Grid, Container } from 'semantic-ui-react';
+import Home from './components/Home';
 
 function App() {
   return (
-    <Router >
-      <Navigation /> 
+    <Router> 
+        <Home />
     </Router>
+
   );
 }
 
