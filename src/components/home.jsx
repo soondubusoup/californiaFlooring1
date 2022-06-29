@@ -1,5 +1,6 @@
 import React from 'react';
-import { 
+import {
+    Logo,
     StyledTop,
     StyledHeader, 
     StyledIcon, 
@@ -13,13 +14,18 @@ import {
     StyledButton,
     That,
     VidWrap,
-    StyledImage,
+    StyledVideo,
     HeaderOverlay,
     HeaderStuff
 } from "../utils/styles";
 import { Grid, Container, Header, Button } from 'semantic-ui-react';
-import Navigation from './Navbar/navigation'; 
-import floor from '../assets/firstFloor.jpg'
+import Navigation from './Navbar/navigation';
+import crown from '../assets/crown.svg'
+
+const flooring = require('../assets/flooring.mp4')
+
+
+const awsUrl = "https://california-flooring.s3.us-west-1.amazonaws.com/flooring.mp4";
 
 function Home() {
     return(
@@ -28,14 +34,14 @@ function Home() {
 
         <That>
             <VidWrap>
-            <StyledImage>
-                <img src={floor} alt="flooring"/> 
-            </StyledImage>
+            <StyledVideo autoPlay loop muted>
+                <source src={flooring} type="video/mp4"/> 
+            </StyledVideo>
             </VidWrap>
             <HeaderOverlay></HeaderOverlay>
             <HeaderStuff>
-            {/* <Logo src={logo} alt="logo"/> */}
-                    <Header style={{color:"White"}} as="h1" content="California Flooring"/>
+            <Logo src={crown} alt="logo"/>
+                    <Header style={{color:"grey"}} as="h1" content="California Flooring"/>
             
                 <Container textAlign="center">
                 

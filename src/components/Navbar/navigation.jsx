@@ -1,27 +1,15 @@
-import { Outlet, Link } from 'react-router-dom'
-import { Fragment } from 'react'
-import logo from '../../assets/crown.svg'
-import './navigation.style.scss'
+import { Link } from "react-router-dom";
+import { Menu, Image } from "semantic-ui-react";
+import logo from "../../assets/crown.svg";
+import "./navigation.style.scss";
 
 const Navigation = () => {
-    return(
-      <Fragment>
-        <div className='navigation'>
-            <Link className='logo-container' to='/'>
-          <img src = {logo} className='logo' />
-          </Link>
-          <div className='nav-links-container'>
-            <Link className='nav-link' to='/shop'>
-                GET A QUOTE
-            </Link>
-            <Link className='nav-link' to='/sign-in'>
-                SIGN IN
-            </Link>
-            <Link className='nav-link' to='/chocolate'> Chocolate </Link>
-          </div>
-        </div>
-        <Outlet />
-      </Fragment>
-    )
-  }
+  return (
+    <Menu className="nav">
+      <Menu.Item as={Link} to="/" name="california_flooring">
+        {<Image src={logo} size="tiny" spaced alt="california flooring" />}
+      </Menu.Item>
+    </Menu>
+  );
+};
 export default Navigation;
