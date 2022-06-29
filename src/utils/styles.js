@@ -43,7 +43,7 @@ display:block;
 padding-bottom:2rem;
 `;
 
-export const StyledImage = Styled.image`
+export const StyledVideo = Styled.video`
 width:100%;
 object-fit:cover;
 left:50%;
