@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+.home {
+    margin: -5rem;
+}
+
+.title {
+    padding-top: 7rem;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 65px;
+}
