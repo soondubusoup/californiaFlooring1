@@ -1,13 +1,19 @@
-import {BrowserRouter as Router} from 'react-router-dom'
-import { Grid, Container } from 'semantic-ui-react';
-import Home from './components/Home';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// import NavBar from "./components/navigation/NavBar.jsx";
+import Home from "./components/home/Home.jsx";
+import './utils/styles.js';
 
 function App() {
   return (
-    <Router> 
-        <Home />
-    </Router>
-
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
